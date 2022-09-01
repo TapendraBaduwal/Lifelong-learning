@@ -29,7 +29,8 @@ Path haru ramro sanga setup garnu parne hunxa python.py files ma.
    
 
 
-##Ubuntu Installation
+## Ubuntu Installation
+
  1. Download ubuntu from this link (https://releases.ubuntu.com/20.04/) annd (https://ubuntu.com/tutorials/create-a-usb-stick-on-ubuntu#1-overview)
  2. Also downloaad or install **Startup Disk Creator**(check in ubuntu software there may be otherwise download or install it).
  3. Inster Pen Drive in local machine and open **Startup Disk Creator** and write image on pendrive disk and  make completed.
