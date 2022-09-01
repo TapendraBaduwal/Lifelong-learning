@@ -24,7 +24,8 @@ Path haru ramro sanga setup garnu parne hunxa python.py files ma.
   
  8. If our Deployment completed then go through the [https://pypi.org/manage/projects/] and view  pip install command.
    Copy that command and test on local vs-code with short user input and output code we made.
-  like **from packages.codefile import classname]**.
+   
+  **from packages.codefile import classname**.
    
    
 
