@@ -13,10 +13,9 @@ Creats [python-package.yml] file(.github folders vitra Workflows folder creat ga
 4. Make Packages  jun folder lai hamile packages bauna xa (src vane folder banyem  tesvitra arko abc vanne folder banayera teslai packages bauna abc vitra __init__.py file creat garna parxa jasle abc folder aba packages ho vanne januxa).
 Note: Jun jun kura haru like project ko project.py files ra teyo sanga related vako files haru like input.json, train model haru sabai abc packages vitra nai huna parxa).
 Path haru ramro sanga setup garnu parne hunxa python.py files ma.
-
 5.Creat [setup.py] python files in which we should writes some commands, Focus on requiremnts.txt commands installation, hamile banako packages ko directory, Python files packages banuda nai  setup hunxa ra non-python files haru lai ni xuttai add garnu loarne hunxa.
-Path haru ramro sanga setup garnu parne hunxa setup.py files ma.
-If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata add garne.
+  Path haru ramro sanga setup garnu parne hunxa setup.py files ma.
+  If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata add garne.
 
 6. Creat .gitignore file ,file which are not required to push on github should be ignored vfrom this files,writs fine names inside this file to ignogres such files like venv/,__pycache__/.
 
