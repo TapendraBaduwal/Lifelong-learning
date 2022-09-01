@@ -17,7 +17,7 @@ Path haru ramro sanga setup garnu parne hunxa python.py files ma.
   Path haru ramro sanga setup garnu parne hunxa setup.py files ma.
   If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata add garne.
 
-6. Creat .gitignore file ,file which are not required to push on github should be ignored vfrom this files,writs fine names inside this file to ignogres such files like venv/,__pycache__/.
+6. Creat .gitignore file ,file which are not required to push on github should be ignored vfrom this files,writs fine names inside this file to ignogres such files like venv/, __pycache__/.
 
 7. Finall make git init,git add .,git push -m "messages",git push.
   Look at  github and go through reposatory and select Action and click on latest workflow to know all workings setups.
