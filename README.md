@@ -22,7 +22,7 @@ Path haru ramro sanga setup garnu parne hunxa python.py files ma.
 7. Finall make git init,git add .,git push -m "messages",git push.
   Look at  github and go through reposatory and select Action and click on latest workflow to know all workings setups.
   
- 8. If our Deployment completed then check the [https://pypi.org/manage/projects/] and view  pip install command.
+ 8. If our Deployment completed then go through the [https://pypi.org/manage/projects/] and view  pip install command.
    Copy that command and test on local vs-code with short user input and output code we made.
    
    
