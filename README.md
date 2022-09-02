@@ -7,8 +7,7 @@
 API tokens provide an alternative way to authenticate when uploading packages to PyPI.
 
 3. Properly capture dependencies in requirements.txt file
-**venv/bin/python3 -m pip freeze > requirements.txt**
-
+**venv/bin/python3 -m pip freeze > requirements.txt**,
 
 **venv/bin/python3 -m pip install -r requirements.txt**
 
