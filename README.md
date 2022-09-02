@@ -1,5 +1,4 @@
 # learning
-
 ## Publishing python code to Pypi package
 
 1. Create accout in [pypi](https://pypi.org/)
@@ -7,9 +6,13 @@
 API tokens provide an alternative way to authenticate when uploading packages to PyPI.
 
 3. Properly capture dependencies in requirements.txt file
-**venv/bin/python3 -m pip freeze > requirements.txt**,
 
-**venv/bin/python3 -m pip install -r requirements.txt**
+    **venv/bin/python3 -m pip freeze > requirements.txt**
+
+    **venv/bin/python3 -m pip install -r requirements.txt**
+
+    **check the venv lib folder sitepackages to know the capture dependencies**
+
 
 4. Setup CI/CD pipeline for automatic deployment from github to pypi:
 Creats [python-package.yml] file(.github folders vitra Workflows folder creat garne tesvitra pthon-package.yml file creats garera tesma worksflows ko rules lekhne) mainly focused on (password: ${{ secrets.test_pypi_password }},repository_url: https://upload.pypi.org/legacy/).
@@ -30,9 +33,16 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 8. Finally make git init,git add .,git push -m "messages",git push.
   Look at  github and go through reposatory and select Action and click on latest workflow to know all workings setups.
   
+   Note: while push new verion on  github  and pypi.org, changes the name and version og our packages from setup.py files and delet the old packages     from pypi.org accounts.
+
 9. If our Deployment completed then go through the [https://pypi.org/manage/projects/] and view  pip install command.
    Copy that command and test on local vs-code with short user input and output code we made.
    **from packages.codefile import classname**.
+   
+ 10. If we want to install our new veersion packages  more then one times then delet old version packages which are stores in [home/hidden files/.local/lib/python3.8/sitespackages/ our install packages(delete if we want to install new version)].
+ 
+   
+
    
    
    
