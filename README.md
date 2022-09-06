@@ -110,3 +110,11 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  
  9. **sudo docker images** to know the blackbox of docker
  
+ 10. **Note if any change in docker files code rebuilt docker images**
+      
+       **sudo docker images** == Check the docker image id 
+       
+       **sudo docker rmi 6ad660682d7f --force** ==Remove and delete docker images with its id
+       
+       **sudo docker-compose up**==Re Builts Docker images
+ 
