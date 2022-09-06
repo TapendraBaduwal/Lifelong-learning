@@ -102,4 +102,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
          python3 -m resultkpd
 
  
- 8. sudo docker-compose up
+ 8. **sudo docker-compose up**
+ 
+ 9. **sudo docker images** to know the blackbox of docker
+ 
