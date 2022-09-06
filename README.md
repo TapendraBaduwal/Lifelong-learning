@@ -106,11 +106,11 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
          python3 -m resultkpd
 
  
- 8. **sudo docker-compose up**
+ 8. **sudo docker-compose up** ==Compose docker file
  
- 9. **sudo docker images** to know the blackbox of docker
+ 9. **sudo docker images** == To know the blackbox of docker
  
- 10. **Note if any change in docker files code rebuilt docker images**
+ 10. **Note:: if any change in docker files code rebuilt docker images**
       
        **sudo docker images** == Check the docker image id 
        
