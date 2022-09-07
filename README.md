@@ -112,6 +112,16 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  
  10. **Note:: if any change in docker files code rebuilt docker images**
       
+       **sudo docker ps -a** == Check the container id
+       
+       **sudo docker stop  6de040f0cefc** ==Stop Container id at first
+       
+       **sudo docker rm 6de040f0cefc** == Remove container id 
+       
+       **or**
+       
+       **docker rm -f 6de040f0cefc** == Forces the removal of a running container
+      
        **sudo docker images** == Check the docker image id 
        
        **sudo docker rmi 6ad660682d7f --force** ==Remove and delete docker images with its id
