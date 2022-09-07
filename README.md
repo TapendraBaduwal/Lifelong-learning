@@ -116,10 +116,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo docker stop  6de040f0cefc** ==Stop Container id at first
        
-       **sudo docker rm 6de040f0cefc** == Remove container id 
-       
-       **or**
-       
+       **sudo docker rm 6de040f0cefc** == Remove container id  **or**
        **docker rm -f 6de040f0cefc** == Forces the removal of a running container
       
        **sudo docker images** == Check the docker image id 
