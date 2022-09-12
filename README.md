@@ -144,5 +144,5 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         print(next(result))
 
  3. Research Paper
- 
-   PP-LCNet: A Lightweight CPU Convolutional Neural Network(https://arxiv.org/abs/2109.15099)
+
+       PP-LCNet: A Lightweight CPU Convolutional Neural Network(https://arxiv.org/abs/2109.15099)
