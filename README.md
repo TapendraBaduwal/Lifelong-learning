@@ -194,3 +194,23 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         im_show = draw_ocr(image, boxes, txts, scores, font_path='/path/to/PaddleOCR/doc/fonts/simfang.ttf')
         im_show = Image.fromarray(im_show)
         im_show.save('result.jpg')
+        
+        
+## Crop an image given the coordinates
+
+1. Documentation(https://splunktool.com/how-do-i-crop-an-image-given-the-coordinates-of-the-four-corners-to-crop)
+
+2. BBOX:
+        x1, y1: 1112 711
+        x2, y2: 1328 698
+        x3, y3: 1330 749
+        x4, y4: 1115 761
+
+        top_left_x = min([x1, x2, x3, x4])
+        top_left_y = min([y1, y2, y3, y4])
+        bot_right_x = max([x1, x2, x3, x4])
+        bot_right_y = max([y1, y2, y3, y4])
+
+        img[top_left_y: bot_right_y, top_left_x: bot_right_x]
+        img[top_left_y: bot_right_y + 1, top_left_x: bot_right_x + 1]
+
