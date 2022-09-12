@@ -131,7 +131,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  
 1. Documentation(https://github.com/PaddlePaddle/PaddleClas/blob/develop/docs/en/PULC/PULC_language_classification_en.md)
 
-2.Quick Start
+2. Quick Start
  
         python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
 
