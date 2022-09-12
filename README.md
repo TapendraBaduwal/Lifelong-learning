@@ -129,7 +129,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  
  ## PULC Classification Model of Language
  
-1. Documentation(https://github.com/PaddlePaddle/PaddleClas/blob/develop/docs/en/PULC/PULC_language_classification_en.md)
+1. Documentation(https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/docs/en/PULC/PULC_language_classification_en.md)
 
 2. Quick Start
  
