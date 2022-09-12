@@ -174,10 +174,12 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 ## Use custom model
 1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.3/doc/doc_en/whl_en.md#31-use-by-code)
 
-2. When the built-in model cannot meet the needs, you need to use your own trained model. First, refer to the first section of inference_en.md to convert    your det and rec model to inference model(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.3/doc/doc_en/inference_en.md), and then use it as   follows
+2. When the built-in model cannot meet the needs, you need to use your own trained model. First, refer to the first section of inference_en.md to convert    your det and rec model to inference model(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.3/doc/doc_en/inference_en.md), and then use it as   follows:
+        
+        
         from paddleocr import PaddleOCR,draw_ocr
         # The path of detection and recognition model must contain model and params files
-        ocr = PaddleOCR(det_model_dir='{your_det_model_dir}', rec_model_dir='{your_rec_model_dir}', rec_char_dict_path='{your_rec_char_dict_path}',      cls_model_dir='{your_cls_model_dir}', use_angle_cls=True)
+        ocr = PaddleOCR(det_model_dir='{your_det_model_dir}', rec_model_dir='{your_rec_model_dir}', rec_char_dict_path='{your_rec_char_dict_path}',       cls_model_dir='{your_cls_model_dir}', use_angle_cls=True)
         img_path = 'PaddleOCR/doc/imgs_en/img_12.jpg'
         result = ocr.ocr(img_path, cls=True)
         for line in result:
