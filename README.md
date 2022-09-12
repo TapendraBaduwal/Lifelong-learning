@@ -125,3 +125,22 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo docker-compose up**==Re Builts Docker images
  
+ 
+ 
+ ## PULC Classification Model of Language
+ 
+ 1. Documentation(https://github.com/PaddlePaddle/PaddleClas/blob/develop/docs/en/PULC/PULC_language_classification_en.md)
+ 
+ 2.Quick Start
+ 
+        python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
+
+        pip3 install paddleclas
+
+
+        import paddleclas
+        model = paddleclas.PaddleClas(model_name="language_classification")
+        result = model.predict(input_data="pulc_demo_imgs/language_classification/word_35404.png")
+        print(next(result))
+
+ 
