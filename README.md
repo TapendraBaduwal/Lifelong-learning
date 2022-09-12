@@ -146,3 +146,28 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  3. Research Paper
 
        PP-LCNet: A Lightweight CPU Convolutional Neural Network(https://arxiv.org/abs/2109.15099)
+       
+    
+    
+## PPOCRLabelv2
+ 1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/tree/release/2.6/PPOCRLabel)
+
+ 2. Installation and Run:
+ 
+        pip3 install --upgrade pip
+
+        python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
+
+
+        Ubuntu Linux::
+        pip3 install PPOCRLabel
+        pip3 install trash-cli
+
+        # Select label mode and run 
+        PPOCRLabel  # [Normal mode] for [detection + recognition] labeling
+
+        Error message::
+        pip install opencv-python==4.2.0.32
+        pyrcc5 -o libs/resources.py resources.qrc
+        pip install opencv-contrib-python-headless==4.2.0.32
+
