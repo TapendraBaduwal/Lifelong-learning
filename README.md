@@ -234,7 +234,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
             # check if the next neighgour box x coordinates is greater then the current box x coordinates if not swap them.
             # repeat the swaping process to a threshold iteration and also select the threshold 
-            threshold_value_y = 10
+            threshold_value_y = 20
             for i in range(25):
               for i in range(num_boxes - 1):
                   if abs(_boxes[i + 1][0][1] - _boxes[i][0][1]) < threshold_value_y and (_boxes[i + 1][0][0] < _boxes[i][0][0]):
