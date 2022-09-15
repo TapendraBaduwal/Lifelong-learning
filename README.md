@@ -302,3 +302,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/issues/1048)
 
 2. We can download single model from here.
+
+## PaddleOCR model training
+
+1. Documentation(https://laravel.wiki/paddleocr-model-training.html)
