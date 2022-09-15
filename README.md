@@ -296,4 +296,9 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
             git reset --hard
           
+       
+## Multilingual OCR Development Plan
 
+1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/issues/1048)
+
+2. We can download single model from here.
