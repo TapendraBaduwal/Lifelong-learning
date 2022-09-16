@@ -306,3 +306,5 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 ## PaddleOCR model training
 
 1. Documentation(https://laravel.wiki/paddleocr-model-training.html)
+
+2. Doc(https://medium.com/@prishanga1/paddleocr-scene-text-recognition-in-the-wild-with-custom-dataset-59fd5f5cf6c3)
