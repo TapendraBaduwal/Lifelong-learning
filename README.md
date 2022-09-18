@@ -315,14 +315,14 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
 1. You need to install the CPU version of paddle first.
 
-     python3 -m pip install paddlepaddle==1.8.0
+         python3 -m pip install paddlepaddle==1.8.0
 
 2. Set the use_gpu parameter to False
 
 3. For predict:
  
-     python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
+         python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
   
 4. For training/evaluation/prediction:
  
-     python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=False
+        python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=False
