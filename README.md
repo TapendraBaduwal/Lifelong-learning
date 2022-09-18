@@ -303,25 +303,26 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
 2. We can download single model from here.
 
+
 ## PaddleOCR model training
 
 1. Documentation(https://laravel.wiki/paddleocr-model-training.html)
 
-2. Doc(https://medium.com/@prishanga1/paddleocr-scene-text-recognition-in-the-wild-with-custom-dataset-59fd5f5cf6c3)
+2. Doc(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_en/recognition_en.md)
 
 
-##You can also train PaddleOCR on CPU.
+## You can also train PaddleOCR on CPU.
 
-You need to install the CPU version of paddle first.
+1. You need to install the CPU version of paddle first.
 
    python3 -m pip install paddlepaddle==1.8.0
 
-Set the use_gpu parameter to False
+2. Set the use_gpu parameter to False
 
-For predict:
+3. For predict:
  
   python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
   
-For training/evaluation/prediction:
+4. For training/evaluation/prediction:
  
    python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=False
