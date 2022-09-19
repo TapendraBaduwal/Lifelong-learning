@@ -310,9 +310,9 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 1. Doc(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_en/recognition_en.md)
 
 
-a. **ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.
+ a.**ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.
       
-b. PPOCRlabel bata label gareko data lai asari milaune...train_data as folder ho
+ b. PPOCRlabel bata label gareko data lai asari milaune...train_data as folder ho
 
  
  Train:
@@ -355,7 +355,7 @@ Test:
                 img1_crop_4.jpg	अन्य,
                 img1_crop_5.jpg	अब,
                 
-c. **devanagari_PP-OCRv3_rec.yml** path setup **PaddleOCR/configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml**
+c.**devanagari_PP-OCRv3_rec.yml** path setup **PaddleOCR/configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml**
 
         Changes file like this::
 
