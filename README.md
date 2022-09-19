@@ -304,26 +304,100 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 2. We can download single model from here.
 
 
-## PaddleOCR model training
-
-1. Documentation(https://laravel.wiki/paddleocr-model-training.html)
-
-2. Doc(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_en/recognition_en.md)
+## PaddleOCR rec model training
 
 
-## You can also train PaddleOCR on CPU.
+1. Doc(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_en/recognition_en.md)
 
-1. You need to install the CPU version of paddle first.
+
+a. **ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.
+      
+b. PPOCRlabel bata label gareko data lai asari milaune...train_data as folder ho
+
+ 
+ Train:
+             -train_data
+                |- rec_gt_train.txt
+                |- train
+                    |- word_001.png
+                    |- word_002.jpg
+                    |- word_003.jpg
+                    | ...
+                    
+          
+          
+          rec_gt_train.txt  ko format as below huna parxa
+   
+                img1_crop_0.jpg	अगाडि,
+                img1_crop_1.jpg	अझै,
+                img1_crop_2.jpg	अनुसार,
+                img1_crop_3.jpg	अन्तर्गत,
+                img1_crop_4.jpg	अन्य,
+                img1_crop_5.jpg	अब,
+                
+Test:
+            -train_data
+                |- rec_gt_test.txt
+                |- train
+                    |- word_001.png
+                    |- word_002.jpg
+                    |- word_003.jpg
+                    | ...
+                    
+          
+          
+          rec_gt_test.txt  ko format as below huna parxa
+   
+                img1_crop_0.jpg	अगाडि,
+                img1_crop_1.jpg	अझै,
+                img1_crop_2.jpg	अनुसार,
+                img1_crop_3.jpg	अन्तर्गत,
+                img1_crop_4.jpg	अन्य,
+                img1_crop_5.jpg	अब,
+                
+c. **devanagari_PP-OCRv3_rec.yml** path setup **PaddleOCR/configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml**
+
+        Changes file like this::
+
+        use_gpu: false .....if no GPU
+
+
+        save_model_dir: ./output/rec
+
+        infer_img: /home/tapendra/Desktop/PaddleOCR/images/docnp (2).png
+
+        character_dict_path: ppocr/utils/dict/devanagari_dict.txt
+
+        save_res_path: ./output/predicts_ppocrv3_devanagari.txt
+
+
+        Train::
+
+        data_dir: ./train_data/rec/train
+
+        label_file_list: ["./train_data/rec/rec_gt_train.txt"]
+
+        EVL/Test::
+
+         data_dir: ./train_data/rec/test
+
+         label_file_list: ["./train_data/rec/rec_gt_test.txt"]
+
+
+                
+**You can also train PaddleOCR on CPU.**
+
+d. You need to install the CPU version of paddle first.
 
          python3 -m pip install paddlepaddle==1.8.0
 
-2. Set the use_gpu parameter to False
+e. Set the use_gpu parameter to False
 
-3. For training/evaluation/prediction:
+f. For training/evaluation/prediction:
  
         python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=False
 
-4. For predict:
+g. For predict:
  
          python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
   
