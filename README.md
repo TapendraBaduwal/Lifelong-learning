@@ -310,7 +310,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 1. Doc(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_en/recognition_en.md)
 
 
- a.**ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.
+ a.**ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.**
       
  b. PPOCRlabel bata label gareko data lai asari milaune...train_data as folder ho
 
@@ -387,18 +387,18 @@ c.**devanagari_PP-OCRv3_rec.yml** path setup **PaddleOCR/configs/rec/PP-OCRv3/mu
                 
 **You can also train PaddleOCR on CPU.**
 
-d. You need to install the CPU version of paddle first.
+    d. You need to install the CPU version of paddle first.
 
-         python3 -m pip install paddlepaddle==1.8.0
+             python3 -m pip install paddlepaddle==1.8.0
 
-e. Set the use_gpu parameter to False
+    e. Set the use_gpu parameter to False
 
-f. For training/evaluation/prediction:
- 
-        python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=False
+    f. For training/evaluation/prediction:
 
-g. For predict:
- 
-         python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
+            python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=False
+
+    g. For predict:
+
+             python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
   
 
