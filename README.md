@@ -422,4 +422,11 @@ i. Convert trained model to inference model:
 
 python3 tools/export_model.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.pretrained_model=devanagari_PP-OCRv3_rec_train/best_accuracy  Global.save_inference_dir=./inference/en_PP-OCRv3_rec/ --use_gpu=False
 
+After the conversion is successful, there are three files in the model save directory:
+
+inference/en_PP-OCRv3_rec/
+    ├── inference.pdiparams         # The parameter file of recognition inference model
+    ├── inference.pdiparams.info    # The parameter information of recognition inference model, which can be ignored
+    └── inference.pdmodel           # The program file of recognition model
+
 
