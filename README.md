@@ -402,3 +402,24 @@ g. For predict:
          python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/ch_det_mv3_db/" --  rec_model_dir="./inference/ch_rec_mv3_crnn/" --use_gpu=False
 
 
+h. After training following parameters will be saved in output/rec folder:
+
+            output/rec/
+            ├── best_accuracy.pdopt  
+            ├── best_accuracy.pdparams  
+            ├── best_accuracy.states  
+            ├── config.yml  
+            ├── iter_epoch_3.pdopt  
+            ├── iter_epoch_3.pdparams  
+            ├── iter_epoch_3.states  
+            ├── latest.pdopt  
+            ├── latest.pdparams  
+            ├── latest.states  
+            └── train.log
+            
+            
+i. Convert trained model to inference model:
+
+python3 tools/export_model.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.pretrained_model=devanagari_PP-OCRv3_rec_train/best_accuracy  Global.save_inference_dir=./inference/en_PP-OCRv3_rec/ --use_gpu=False
+
+
