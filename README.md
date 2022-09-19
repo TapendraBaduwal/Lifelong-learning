@@ -420,7 +420,10 @@ h. After training following parameters will be saved in output/rec folder:
             
 i. Convert trained model to inference model:
 
-python3 tools/export_model.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.pretrained_model=devanagari_PP-OCRv3_rec_train/best_accuracy  Global.save_inference_dir=./inference/en_PP-OCRv3_rec/ --use_gpu=False
+       # Global.save_inference_dir Set the address where the converted model will be saved.
+
+
+        python3 tools/export_model.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.pretrained_model=devanagari_PP-OCRv3_rec_train/best_accuracy  Global.save_inference_dir=./inference/en_PP-OCRv3_rec/ --use_gpu=False
 
 After the conversion is successful, there are three files in the model save directory:
 
