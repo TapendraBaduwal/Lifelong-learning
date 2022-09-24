@@ -306,8 +306,21 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 
             print(sorted_boxes)
             return _boxes
+            
+## How to Increase Image Resolution
 
+          for i in range(10):
+            doc = fitz.open(input_imgfile_path)
+            page = doc.load_page(i)
+            zoom_x = 2.0 # horizontal zoom
+            zoom_y = 2.0 # vertical zoom
+            mat = fitz.Matrix(zoom_x, zoom_y) # zoom factor 2 in each dimension
+            pix = page.get_pixmap(matrix=mat) # use 'mat' instead of the identity matrix
 
+       or 
+       dpi concept ======dots per inch can be used in place of "matrix" dpi value is saved with the image file – 
+       which does not happen automatically when  using the Matrix notation.
+       pix = page.get_pixmap(dpi=300)
                 
 
 ## Some GIT commands                                                 
