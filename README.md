@@ -201,7 +201,44 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         im_show = Image.fromarray(im_show)
         im_show.save('result.jpg')
         
-        
+  
+  ## Images Read
+
+When the image file is read with the OpenCV function imread(), the order of colors is BGR (blue, green, red). 
+
+On the other hand, in Pillow, the order of colors is assumed to be RGB (red, green, blue).
+
+1. cv2.imread() ==== always on BGR format
+
+2. pill img mostly === RGB and other mode format
+
+3. Paddleocr better worked on GRAY and BGR.
+
+## Handel Pdf,Images and iterate pages
+       
+       pdf_or_img = path
+       numpyarray_img_list = []
+        def pdf_to_img(self):
+                try:
+                    for i in range(5):
+                        doc = fitz.open(pdf_or_img)
+                        page = doc.load_page(i)
+                        zoom = 1.3333 # zoom factor not to lose the quality
+                        mat = fitz.Matrix(zoom, zoom)
+                        pix = page.get_pixmap(matrix = mat)
+
+                        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                        numpy_image = np.asarray(img)
+                        # paddleocr better work on GRAY scale img
+                        numpy_image = cv2.cvtColor(numpy_image, cv2.COLOR_RGB2GRAY)
+                        print(numpy_image)
+                        print(numpy_image.shape)
+
+                        numpyarray_img_list.append(numpy_image)
+                except ValueError:
+                    pass
+                return numpyarray_img_list
+                
         
  **Only BBOX detection**
  
@@ -271,42 +308,6 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
             return _boxes
 
 
-## Images Read
-
-When the image file is read with the OpenCV function imread(), the order of colors is BGR (blue, green, red). 
-
-On the other hand, in Pillow, the order of colors is assumed to be RGB (red, green, blue).
-
-1. cv2.imread() ==== always on BGR format
-
-2. pill img mostly === RGB and other mode format
-
-3. Paddleocr better worked on GRAY and BGR.
-
-## Handel Pdf,Images and iterate pages
-       
-       pdf_or_img = path
-       numpyarray_img_list = []
-        def pdf_to_img(self):
-                try:
-                    for i in range(5):
-                        doc = fitz.open(pdf_or_img)
-                        page = doc.load_page(i)
-                        zoom = 1.3333 # zoom factor not to lose the quality
-                        mat = fitz.Matrix(zoom, zoom)
-                        pix = page.get_pixmap(matrix = mat)
-
-                        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-                        numpy_image = np.asarray(img)
-                        # paddleocr better work on GRAY scale img
-                        numpy_image = cv2.cvtColor(numpy_image, cv2.COLOR_RGB2GRAY)
-                        print(numpy_image)
-                        print(numpy_image.shape)
-
-                        numpyarray_img_list.append(numpy_image)
-                except ValueError:
-                    pass
-                return numpyarray_img_list
                 
 
 ## Some GIT commands                                                 
