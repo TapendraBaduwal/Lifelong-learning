@@ -468,3 +468,28 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 2. pill img mostly === RGB and other mode format
 
 3. Paddleocr better worked on GRAY and BGR.
+
+## Handel Pdf,Images and iterate pages
+       
+       pdf_or_img = path
+       numpyarray_img_list = []
+        def pdf_to_img(self):
+                try:
+                    for i in range(5):
+                        doc = fitz.open(pdf_or_img)
+                        page = doc.load_page(i)
+                        zoom = 1.3333 # zoom factor not to lose the quality
+                        mat = fitz.Matrix(zoom, zoom)
+                        pix = page.get_pixmap(matrix = mat)
+
+                        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                        numpy_image = np.asarray(img)
+                        # paddleocr better work on GRAY scale img
+                        numpy_image = cv2.cvtColor(numpy_image, cv2.COLOR_RGB2GRAY)
+                        print(numpy_image)
+                        print(numpy_image.shape)
+
+                        numpyarray_img_list.append(numpy_image)
+                except ValueError:
+                    pass
+                return numpyarray_img_list
