@@ -459,6 +459,10 @@ After the conversion is successful, there are three files in the model save dire
 
 ## Images Read
 
+When the image file is read with the OpenCV function imread(), the order of colors is BGR (blue, green, red). 
+
+On the other hand, in Pillow, the order of colors is assumed to be RGB (red, green, blue).
+
 1. cv2.imread() ==== always on BGR format
 
 2. pill img mostly === RGB and other mode format
