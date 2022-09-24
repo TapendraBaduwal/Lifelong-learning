@@ -181,7 +181,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         
         from paddleocr import PaddleOCR,draw_ocr
         # The path of detection and recognition model must contain model and params files
-        ocr = PaddleOCR(det_model_dir='{your_det_model_dir}', rec_model_dir='{your_rec_model_dir}', rec_char_dict_path='{your_rec_char_dict_path}',       cls_model_dir='{your_cls_model_dir}', use_angle_cls=True)
+        ocr = PaddleOCR(det_model_dir='{your_det_model_dir}', rec_model_dir='{your_rec_model_dir}', rec_char_dict_path='{your_rec_char_dict_path}',     cls_model_dir='{your_cls_model_dir}', use_angle_cls=True)
         
         img = cv2.imread(img_path) #Support numpy arrray in BGR format also if our model already support GRAY otherwise used GRAY IMG
         
@@ -201,6 +201,25 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         im_show = Image.fromarray(im_show)
         im_show.save('result.jpg')
         
+        
+        
+ **Only BBOX detection**
+ 
+                from paddleocr import PaddleOCR,draw_ocr
+                from PIL import Image
+
+                ocr = PaddleOCR(use_angle_cls=True, lang='ne')
+                img_path = '/home/tapendra/Desktop/kapediaml/images/3lineimg.png'
+                result = ocr.ocr(img_path,cls=True,rec=False)
+                for line in result:
+                    print(line)
+
+
+                image = Image.open(img_path).convert('RGB')
+                im_show = draw_ocr(image, result, txts=None, scores=None, font_path='/home/tapendra/Desktop/kapediaml/nepali.ttf')
+                im_show = Image.fromarray(im_show)
+                im_show.save('result.jpg')
+
         
 ## Crop an image given the coordinates
 
