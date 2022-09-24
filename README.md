@@ -182,7 +182,9 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         from paddleocr import PaddleOCR,draw_ocr
         # The path of detection and recognition model must contain model and params files
         ocr = PaddleOCR(det_model_dir='{your_det_model_dir}', rec_model_dir='{your_rec_model_dir}', rec_char_dict_path='{your_rec_char_dict_path}',       cls_model_dir='{your_cls_model_dir}', use_angle_cls=True)
-        img_path = 'PaddleOCR/doc/imgs_en/img_12.jpg'
+        img = cv2.imread(img_path) #Support numpy arrray in BGR format
+       # img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY), If your own training model supports grayscale images, you can uncomment this line
+result = ocr.ocr(img_path, cls=True)
         result = ocr.ocr(img_path, cls=True)
         for line in result:
             print(line)
