@@ -456,3 +456,11 @@ After the conversion is successful, there are three files in the model save dire
                 └── inference.pdmodel           # The program file of recognition model
 
 
+
+## Images Read
+
+1. cv2.imread() ==== always on BGR format
+
+2. pill img mostly === RGB and other mode format
+
+3. Paddleocr better worked on GRAY and BGR.
