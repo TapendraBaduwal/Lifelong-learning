@@ -139,10 +139,15 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
         pip3 install paddleclas
 
-
+        Note: paddleclas model accept image array in RGB i.e 3 channel img array.
+        
         import paddleclas
+        input_data="pulc_demo_imgs/language_classification/word_35404.png
         model = paddleclas.PaddleClas(model_name="language_classification")
-        result = model.predict(input_data="pulc_demo_imgs/language_classification/word_35404.png")
+        result = model.predict(input_data= input_data)
+        
+        
+        
         print(next(result))
 
  3. Research Paper
@@ -178,7 +183,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
 2. When the built-in model cannot meet the needs, you need to use your own trained model. First, refer to the first section of inference_en.md to convert    your det and rec model to inference model(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.3/doc/doc_en/inference_en.md), and then use it as   follows:
         
-        
+3. Paddleocr worked better on GRAY or BGR img or numpy array  
         from paddleocr import PaddleOCR,draw_ocr
         # The path of detection and recognition model must contain model and params files
         ocr = PaddleOCR(det_model_dir='{your_det_model_dir}', rec_model_dir='{your_rec_model_dir}', rec_char_dict_path='{your_rec_char_dict_path}',     cls_model_dir='{your_cls_model_dir}', use_angle_cls=True)
