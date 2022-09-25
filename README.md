@@ -141,14 +141,13 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
         Note: paddleclas model accept image array in RGB i.e 3 channel img array.
         
-        import paddleclas
-        input_data="pulc_demo_imgs/language_classification/word_35404.png
-        model = paddleclas.PaddleClas(model_name="language_classification")
-        result = model.predict(input_data= input_data)
-        
-        
-        
+        from paddleclas import PaddleClas
+        clas = PaddleClas(model_name="language_classification", inference_model_dir= self.lang_classification_dir_path)
+        infer_imgs = '/home/tapendra/Desktop/kapediaml/images/docnp (1).png'
+        result=clas.predict(infer_imgs)
         print(next(result))
+        
+   
 
  3. Research Paper
 
