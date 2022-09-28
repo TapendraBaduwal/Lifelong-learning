@@ -218,6 +218,8 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 
 3. Paddleocr better worked on GRAY and BGR.
 
+4. paddlecls used 3 channel RGB img.
+
 ## Handel Pdf,Images and iterate pages
        
        pdf_or_img = path
