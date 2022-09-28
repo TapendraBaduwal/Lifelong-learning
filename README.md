@@ -312,6 +312,34 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 
             print(sorted_boxes)
             return _boxes
+
+
+## Add single line Bbox in single list
+
+            result_tapendra = []
+            temp_tapendra = []
+            for index, box in enumerate(_boxes):
+                # print(index, box)
+                current = int(box[0][0])
+                print(current)
+                try:
+                    next = int(_boxes[index+1][0][0])
+                    # print(next)
+                except IndexError:
+                    # temp_tapendra = []
+                    # temp_tapendra.append(current)
+                    result_tapendra.append(temp_tapendra)
+
+                if current<=next:
+                    temp_tapendra.append(current)
+
+                else:
+                    temp_tapendra.append(current)
+                    result_tapendra.append(temp_tapendra)
+                    temp_tapendra = []
+            print(result_tapendra)
+            
+
             
 ## How to Increase Image Resolution
 
