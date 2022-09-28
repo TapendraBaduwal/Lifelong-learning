@@ -314,7 +314,7 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
             return _boxes
 
 
-## Add single line Bbox in single list
+## Add single line Bbox img array into single list
 
             result_tapendra = []
             temp_tapendra = []
@@ -326,8 +326,6 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
                     next = int(_boxes[index+1][0][0])
                     # print(next)
                 except IndexError:
-                    # temp_tapendra = []
-                    # temp_tapendra.append(current)
                     result_tapendra.append(temp_tapendra)
 
                 if current<=next:
