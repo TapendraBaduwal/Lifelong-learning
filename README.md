@@ -319,12 +319,9 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
             result_tapendra = []
             temp_tapendra = []
             for index, box in enumerate(_boxes):
-                # print(index, box)
                 current = int(box[0][0])
-                print(current)
                 try:
                     next = int(_boxes[index+1][0][0])
-                    # print(next)
                 except IndexError:
                     result_tapendra.append(temp_tapendra)
 
