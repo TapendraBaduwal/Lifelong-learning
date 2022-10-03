@@ -338,6 +338,8 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
             
 ## How to Increase Image Resolution
 
+1. Doc(https://buildmedia.readthedocs.org/media/pdf/pymupdf/latest/pymupdf.pdf)
+
           for i in range(10):
             doc = fitz.open(input_imgfile_path)
             page = doc.load_page(i)
