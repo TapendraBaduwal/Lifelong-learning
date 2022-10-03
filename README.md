@@ -225,24 +225,22 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
        pdf_or_img = path
        numpyarray_img_list = []
         def pdf_to_img(self):
-                try:
-                    for i in range(5):
-                        doc = fitz.open(pdf_or_img)
-                        page = doc.load_page(i)
-                        zoom = 1.3333 # zoom factor not to lose the quality
-                        mat = fitz.Matrix(zoom, zoom)
-                        pix = page.get_pixmap(matrix = mat)
-
-                        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
-                        numpy_image = np.asarray(img)
-                        # paddleocr better work on GRAY scale img
-                        numpy_image = cv2.cvtColor(numpy_image, cv2.COLOR_RGB2GRAY)
-                        print(numpy_image)
-                        print(numpy_image.shape)
-
-                        numpyarray_img_list.append(numpy_image)
-                except ValueError:
-                    pass
+         try:
+            for i in range(5):
+                doc = fitz.open(self.input_pdfimg_file_path)
+                page = doc.load_page(i)
+                zoom_x = 2.5
+                zoom_y = 2.5
+                mat = fitz.Matrix(zoom_x, zoom_y)
+                pix = page.get_pixmap(matrix = mat, alpha =False)
+                #pix = page.get_pixmap(dpi=300)
+                img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                numpy_image = np.asarray(img)
+                #paddleocr worked better on GRAY or BGR image
+                gray_numpy_image = cv2.cvtColor(numpy_image, cv2.COLOR_RGB2GRAY)
+                numpyarray_images_list.append(gray_numpy_image)
+        except ValueError:
+            pass
                 return numpyarray_img_list
                 
         
@@ -319,13 +317,14 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
             result_tapendra = []
             temp_tapendra = []
             for index, box in enumerate(_boxes):
-                current = int(box[0][0])
+                current = int(box[0][1])
                 try:
-                    next = int(_boxes[index+1][0][0])
+                    next = int(_boxes[index+1][0][1])
                 except IndexError:
                     result_tapendra.append(temp_tapendra)
 
-                if current<=next:
+                threshold_value_y = ((bot_right_y- top_left_y)/2) + 2
+                if (next_top_left_y1 - current_top_left_y1) <= threshold_value_y:
                     temp_tapendra.append(current)
 
                 else:
