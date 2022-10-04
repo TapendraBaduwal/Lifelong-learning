@@ -538,4 +538,10 @@ After the conversion is successful, there are three files in the model save dire
                 └── inference.pdmodel           # The program file of recognition model
 
 
-# Machine Learning(https://github.com/regmi-saugat/66Days_MachineLearning)
+## Machine Learning(https://github.com/regmi-saugat/66Days_MachineLearning)
+
+##Table Extraction
+
+1. Video(https://www.youtube.com/watch?v=HZh31OGiQRQ)
+
+2. Doc(https://colab.research.google.com/drive/1I-tp71bSdQmXG6wwqAPTd9Sn63Rtf4nC#scrollTo=w5MA08E0F8aU)
