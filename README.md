@@ -538,19 +538,19 @@ After the conversion is successful, there are three files in the model save dire
                 └── inference.pdmodel           # The program file of recognition model
 
 
-##Machine Learning
+## Machine Learning
 1. (https://github.com/regmi-saugat/66Days_MachineLearning)
 
-##Table Extraction
+## Table Extraction
 
 1. Video(https://www.youtube.com/watch?v=HZh31OGiQRQ)
 
 2. Doc(https://colab.research.google.com/drive/1I-tp71bSdQmXG6wwqAPTd9Sn63Rtf4nC#scrollTo=w5MA08E0F8aU)
 
 
-##Django REST Framework 
+## Django REST Framework 
 1. Doc(https://www.django-rest-framework.org/tutorial/1-serialization/#writing-regular-django-views-using-our-serializer)
 2. https://www.youtube.com/watch?v=qXXC6ocTC80&list=PLbGui_ZYuhijTKyrlu-0g5GcP9nUp_HlN&index=1
 
-##Postman
+## Postman
 1. Doc(https://www.postman.com/)
