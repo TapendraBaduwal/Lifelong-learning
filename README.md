@@ -19,11 +19,20 @@ API tokens provide an alternative way to authenticate when uploading packages to
     **source kvenv/bin/activate**
     
     or 
+    
     **pipenv shell**
 
     **venv/bin/python3 -m pip freeze > requirements.txt**
+    
+    or 
+    
+    **pip freeze > requirements.txt**
 
     **venv/bin/python3 -m pip install -r requirements.txt**
+    
+    or
+    
+    **pip install -r requirements.txt**
 
     **check the venv lib folder sitepackages to know the capture dependencies**
 
