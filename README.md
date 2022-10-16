@@ -11,7 +11,15 @@ API tokens provide an alternative way to authenticate when uploading packages to
     
     **python3 -m venv kvenv**
     
+    or
+    
+    **pipenv --python 3.8**
+    
+    
     **source kvenv/bin/activate**
+    
+    or 
+    **pipenv shell**
 
     **venv/bin/python3 -m pip freeze > requirements.txt**
 
