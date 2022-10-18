@@ -124,9 +124,13 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
          python3 -m resultkpd
          
+         or
+         
          for single user support
         
          python manage.py runserver 0.0.0.0:8003
+         
+         or
 
          Support multi user
         
