@@ -156,7 +156,15 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo docker-compose up**==Re Builts Docker images
  
+ 11. **Note: if any erro in Dockerfile by**
+ 
+      RUN apt-get update && apt-get install -y python3-opencv
+
+      RUN pip install opencv-python
       
+      Solution: docker builder prune or docker system prune --all
+ 
+     I had the same issue. For me the issue was that my "apt update -y" step was cached and thus contained wrong repo's. Fixed it by forcing it to not    use cache. To clear the cache before run use **docker builder prune** or if that doesn't work (as it didn't for me) try something more aggressive such as **docker system prune --all**
 
  
  ## PULC Classification Model of Language
