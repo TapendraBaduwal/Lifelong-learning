@@ -167,7 +167,10 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
       RUN pip install opencv-python
       
-      Solution: **docker builder prune or docker system prune --all**
+      Solution: 
+      **sudo apt-get update**
+      
+      **docker builder prune , docker system prune --all**
  
      I had the same issue. For me the issue was that my "apt update -y" step was cached and thus contained wrong repo's. Fixed it by forcing it to not    use cache. To clear the cache before run use **docker builder prune** or if that doesn't work (as it didn't for me) try something more aggressive such as **docker system prune --all**
 
