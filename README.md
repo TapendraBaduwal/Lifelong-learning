@@ -124,13 +124,13 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
          python3 -m resultkpd
          
-         #for single user support
+         for single user support
         
-        **python manage.py runserver 0.0.0.0:8003**
+         python manage.py runserver 0.0.0.0:8003
 
-        #Support multi user
+         Support multi user
         
-        **gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003**
+         gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003
 
  
  8. **sudo docker-compose up** ==Compose docker file
