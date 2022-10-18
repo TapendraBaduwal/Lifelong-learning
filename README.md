@@ -135,6 +135,11 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
          Support multi user
         
          gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003
+         
+         or
+         
+         gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003 --timeout 600
+
 
  
  8. **sudo docker-compose up** ==Compose docker file
