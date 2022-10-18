@@ -145,6 +145,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        **sudo docker-compose up**==Re Builts Docker images
  
 11. **entrypoint.sh** file
+12. 
         for single user support
         
         **python manage.py runserver 0.0.0.0:8003**
