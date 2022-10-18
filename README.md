@@ -123,6 +123,14 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
          #!/bin/sh
 
          python3 -m resultkpd
+         
+         #for single user support
+        
+        **python manage.py runserver 0.0.0.0:8003**
+
+        #Support multi user
+        
+        **gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003**
 
  
  8. **sudo docker-compose up** ==Compose docker file
@@ -144,15 +152,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo docker-compose up**==Re Builts Docker images
  
-11. **entrypoint.sh** file
-12. 
-        for single user support
-        
-        **python manage.py runserver 0.0.0.0:8003**
-
-        Support multi user
-        
-        **gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003**
+      
 
  
  ## PULC Classification Model of Language
