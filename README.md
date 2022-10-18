@@ -144,11 +144,13 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo docker-compose up**==Re Builts Docker images
  
-11. entrypoint.sh 
-        #for single user support
+11. **entrypoint.sh** file
+        for single user support
+        
         **python manage.py runserver 0.0.0.0:8003**
 
-        #Support multi user
+        Support multi user
+        
         **gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003**
 
  
