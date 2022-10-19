@@ -74,6 +74,22 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  4. After that press power off button of laptop and inster bootable Pendrvie and press **F12** button and follow the rules.
  
  
+ ## Run API and Docker(django rest framework api)
+
+       ** whole api project work under virtual env** 
+
+       **pip install djangorestframework**(api project creat garne**
+
+       **pip install django-cors-headers**(Make api use by all origin)
+       
+       **pip install python-decouple** (Hinde garne kura .env file ma rakhne using decouple)
+       
+       ** python manage.py collectstatic**( make static api)
+       
+
+        **sudo docker-compose up**
+ 
+ 
  ## Dockerfile
  
  1. sudo apt install docker.io
@@ -170,11 +186,12 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
       Solution: 
       **sudo apt-get update**
       
-      **docker builder prune , docker system prune --all**
+      **sudo docker builder prune , sudo docker system prune --volumes**
  
      I had the same issue. For me the issue was that my "apt update -y" step was cached and thus contained wrong repo's. Fixed it by forcing it to not    use cache. To clear the cache before run use **docker builder prune** or if that doesn't work (as it didn't for me) try something more aggressive such as **docker system prune --all**
 
- 
+
+
  ## PULC Classification Model of Language
  
 1. Documentation(https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/docs/en/PULC/PULC_language_classification_en.md)
