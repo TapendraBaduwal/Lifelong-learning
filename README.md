@@ -84,6 +84,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **pip install python-decouple** (Hinde garne kura .env file ma rakhne using decouple)
        
+       **pip install gunicorn**
+       
        ** python manage.py collectstatic**( make static api)
        
 
