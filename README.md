@@ -480,7 +480,7 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 1. Doc(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.4/doc/doc_en/recognition_en.md)
 
 
- a.**ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.**
+ a. **ppocr/utils/dict/devanagari_dict.txt  setup garne jasma lang ko words haru hunxan.**
 
  b. PPOCRlabel bata label gareko data lai asari milaune...train_data as folder ho
 
@@ -488,7 +488,7 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
  Train:
              -train_data
                 |- rec_gt_train.txt
-                |- train
+                |- train/crop_img
                     |- word_001.png
                     |- word_002.jpg
                     |- word_003.jpg
@@ -508,7 +508,7 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 Test:
             -train_data
                 |- rec_gt_test.txt
-                |- train
+                |- train/crop_img
                     |- word_001.png
                     |- word_002.jpg
                     |- word_003.jpg
@@ -534,7 +534,7 @@ c.**devanagari_PP-OCRv3_rec.yml** path setup **PaddleOCR/configs/rec/PP-OCRv3/mu
 
         save_model_dir: ./output/rec
 
-        infer_img: /home/tapendra/Desktop/PaddleOCR/images/docnp (2).png
+        infer_img: /home/tapendra/Desktop/PaddleOCR/images/test.png
 
         character_dict_path: ppocr/utils/dict/devanagari_dict.txt
 
