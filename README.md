@@ -559,7 +559,7 @@ c.**devanagari_PP-OCRv3_rec.yml** path setup **PaddleOCR/configs/rec/PP-OCRv3/mu
 
 d. You need to install the CPU version of paddle first.
 
-         python3 -m pip install paddlepaddle==1.8.0
+         python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
 
 e. Set the use_gpu parameter to False
 
