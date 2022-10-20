@@ -563,43 +563,43 @@ d. You need to install the CPU version of paddle first.
 
 e. Set the use_gpu parameter to False
 
-## For training/evaluation/prediction:
+ ## For training/evaluation/prediction:
 
-f. python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=True
+    f. python3 tools/train.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.use_gpu=True
 
-## For predict:
+ ## For predict:
 
-g. python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/devanagari_det_mv3_db/" --  rec_model_dir="./inference/devanagari_rec_mv3_crnn/" --use_gpu=True
+    g. python3 tools/infer/predict_system.py --image_dir="./doc/imgs/11.jpg" --det_model_dir="./inference/devanagari_det_mv3_db/" --  rec_model_dir="./inference/devanagari_rec_mv3_crnn/" --use_gpu=True
 
-step5. After training following parameters will be saved in output_model/rec folder:
+    step5. After training following parameters will be saved in output_model/rec folder:
 
-            output_model/rec/
-            ├── best_accuracy.pdopt
-            ├── best_accuracy.pdparams
-            ├── best_accuracy.states
-            ├── config.yml
-            ├── iter_epoch_3.pdopt
-            ├── iter_epoch_3.pdparams
-            ├── iter_epoch_3.states
-            ├── latest.pdopt
-            ├── latest.pdparams
-            ├── latest.states
-            └── train.log
-
-
-h. Convert trained model to inference model:
-
-       # Global.save_inference_dir Set the address where the converted model will be saved.
+                output_model/rec/
+                ├── best_accuracy.pdopt
+                ├── best_accuracy.pdparams
+                ├── best_accuracy.states
+                ├── config.yml
+                ├── iter_epoch_3.pdopt
+                ├── iter_epoch_3.pdparams
+                ├── iter_epoch_3.states
+                ├── latest.pdopt
+                ├── latest.pdparams
+                ├── latest.states
+                └── train.log
 
 
-        python3 tools/export_model.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.pretrained_model=devanagari_PP-OCRv3_rec_train/best_accuracy  Global.save_inference_dir=./inference/devanagari_PP-OCRv3_rec/ --use_gpu=True
+    h. Convert trained model to inference model:
 
-i. After the conversion is successful, there are three files in the model save directory:
+           # Global.save_inference_dir Set the address where the converted model will be saved.
 
-            inference/devanagari_PP-OCRv3_rec/
-                ├── inference.pdiparams         # The parameter file of recognition inference model
-                ├── inference.pdiparams.info    # The parameter information of recognition inference model, which can be ignored
-                └── inference.pdmodel           # The program file of recognition model
+
+            python3 tools/export_model.py -c configs/rec/PP-OCRv3/multi_language/devanagari_PP-OCRv3_rec.yml -o Global.pretrained_model=devanagari_PP-OCRv3_rec_train/best_accuracy  Global.save_inference_dir=./inference/devanagari_PP-OCRv3_rec/ --use_gpu=True
+
+    i. After the conversion is successful, there are three files in the model save directory:
+
+                inference/devanagari_PP-OCRv3_rec/
+                    ├── inference.pdiparams         # The parameter file of recognition inference model
+                    ├── inference.pdiparams.info    # The parameter information of recognition inference model, which can be ignored
+                    └── inference.pdmodel           # The program file of recognition model
 
 
 
