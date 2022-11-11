@@ -607,11 +607,26 @@ e. Set the use_gpu parameter to False
 ## Machine Learning
 1. (https://github.com/regmi-saugat/66Days_MachineLearning)
 
-## Table Extraction
+## Table Extraction Table recognition
 
 1. Video(https://www.youtube.com/watch?v=HZh31OGiQRQ)
 
 2. Doc(https://colab.research.google.com/drive/1I-tp71bSdQmXG6wwqAPTd9Sn63Rtf4nC#scrollTo=w5MA08E0F8aU)
+
+3. https://arxiv.org/pdf/2105.01848.pdf 
+
+4. https://github.com/PaddlePaddle/PaddleOCR/tree/release/2.6/ppstructure/table 
+
+5. https://www.youtube.com/watch?v=HZh31OGiQRQ 
+
+6. https://huggingface.co/docs/transformers/main/model_doc/table-transformer
+
+7. https://huggingface.co/models?other=table-transformer
+
+8. https://github.com/NielsRogge/Transformers-Tutorials/tree/master/Table%20Transformer
+
+
+
 
 
 ## Django REST Framework 
