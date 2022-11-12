@@ -625,6 +625,8 @@ e. Set the use_gpu parameter to False
 
 8. https://github.com/NielsRogge/Transformers-Tutorials/tree/master/Table%20Transformer
 
+9. https://github.com/microsoft/table-transformer
+
 
 
 
