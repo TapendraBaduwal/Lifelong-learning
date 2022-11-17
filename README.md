@@ -609,23 +609,25 @@ e. Set the use_gpu parameter to False
 
 ## Table Extraction Table recognition
 
-1. Video(https://www.youtube.com/watch?v=HZh31OGiQRQ)
+1. https://github.com/PaddlePaddle/PaddleOCR/blob/release%2F2.6/ppstructure/table/predict_table.py
 
-2. Doc(https://colab.research.google.com/drive/1I-tp71bSdQmXG6wwqAPTd9Sn63Rtf4nC#scrollTo=w5MA08E0F8aU)
+2. Video(https://www.youtube.com/watch?v=HZh31OGiQRQ)
 
-3. https://arxiv.org/pdf/2105.01848.pdf 
+3. Doc(https://colab.research.google.com/drive/1I-tp71bSdQmXG6wwqAPTd9Sn63Rtf4nC#scrollTo=w5MA08E0F8aU)
 
-4. https://github.com/PaddlePaddle/PaddleOCR/tree/release/2.6/ppstructure/table 
+4. https://arxiv.org/pdf/2105.01848.pdf 
 
-5. https://www.youtube.com/watch?v=HZh31OGiQRQ 
+5. https://github.com/PaddlePaddle/PaddleOCR/tree/release/2.6/ppstructure/table 
 
-6. https://huggingface.co/docs/transformers/main/model_doc/table-transformer
+6. https://www.youtube.com/watch?v=HZh31OGiQRQ 
 
-7. https://huggingface.co/models?other=table-transformer
+7. https://huggingface.co/docs/transformers/main/model_doc/table-transformer
 
-8. https://github.com/NielsRogge/Transformers-Tutorials/tree/master/Table%20Transformer
+8. https://huggingface.co/models?other=table-transformer
 
-9. https://github.com/microsoft/table-transformer
+9. https://github.com/NielsRogge/Transformers-Tutorials/tree/master/Table%20Transformer
+
+10. https://github.com/microsoft/table-transformer
 
 
 
