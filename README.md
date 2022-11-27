@@ -235,7 +235,10 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         pip3 install trash-cli
 
         # Select label mode and run 
+        
         PPOCRLabel  # [Normal mode] for [detection + recognition] labeling
+        
+        PPOCRLabel --kie True # [KIE mode] for [detection + recognition + keyword extraction] labeling
 
         Error message::
         pip install opencv-python==4.2.0.32
