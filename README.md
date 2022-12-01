@@ -185,6 +185,11 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
       RUN pip install opencv-python
       
+      or 
+      
+      RUN apt-get update
+      RUN apt-get install ffmpeg libsm6 libxext6  -y
+      
       Solution: 
       **sudo apt-get update**
       
