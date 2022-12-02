@@ -190,6 +190,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
       RUN apt-get update
       RUN apt-get install ffmpeg libsm6 libxext6  -y
       
+      It is because ffmpeg libsm6 libxext6 libgl1-mesa-dev are linux packages and you are trying to install them as if they were python packages. You     need to install them to your operating system instead of python environment.
+      
       Solution: 
       **sudo apt-get update**
       
