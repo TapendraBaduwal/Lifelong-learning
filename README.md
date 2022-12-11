@@ -205,7 +205,9 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  
 1. Documentation(https://github.com/PaddlePaddle/PaddleClas/blob/release/2.5/docs/en/PULC/PULC_language_classification_en.md)
 
-2. Quick Start
+2.Model(https://github.com/PaddlePaddle/PaddleClas/blob/develop/docs/en/PULC/PULC_model_list_en.md)
+
+3. Quick Start
  
         python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
 
@@ -221,7 +223,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         
    
 
- 3. Research Paper
+ 4. Research Paper
 
        PP-LCNet: A Lightweight CPU Convolutional Neural Network(https://arxiv.org/abs/2109.15099)
        
@@ -511,9 +513,7 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
 
 1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/issues/1048)
 
-2.Model(https://github.com/PaddlePaddle/PaddleClas/blob/develop/docs/en/PULC/PULC_model_list_en.md)
-
-3. We can download single model from here.
+2. We can download single model from here.
 
 
 ## PaddleOCR rec model training
