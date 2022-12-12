@@ -254,6 +254,21 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         pyrcc5 -o libs/resources.py resources.qrc
         pip install opencv-contrib-python-headless==4.2.0.32
 
+## Labelme(Layout analysis data annotation tool)
+
+1. Documentation(https://github.com/wkentaro/labelme)
+
+2. Installation and Run:
+
+        sudo apt-get install labelme
+
+        # or
+        sudo pip3 install labelme
+        
+        labelme 
+
+
+
 ## Use custom model
 1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.3/doc/doc_en/whl_en.md#31-use-by-code)
 
