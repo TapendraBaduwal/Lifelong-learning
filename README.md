@@ -267,7 +267,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
         
         labelme 
 
-
+3.Convert LabelMe annotations to COCO format in one step(https://pypi.org/project/labelme2coco/)
 
 ## Use custom model
 1. Documentation(https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.3/doc/doc_en/whl_en.md#31-use-by-code)
