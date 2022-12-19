@@ -178,6 +178,20 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        **sudo docker rmi 6ad660682d7f --force** ==Remove and delete docker images with its id
        
        **sudo docker-compose up**==Re Builts Docker images
+       
+       **sudo docker-compose down**
+       
+       **sudo systemctl status docker**
+       
+       **sudo systemctl start docker**
+       
+       **sudo systemctl stop docker**
+       
+       **sudo systemctl restart docker**
+       
+       **sudo service docker restart**
+       
+       **sudo apt-get remove docker docker.io**
  
  11. **Note: if any erro in Dockerfile by**
  
