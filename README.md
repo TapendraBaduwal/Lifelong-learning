@@ -193,6 +193,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo service docker restart**
        
+       **docker-compose up --detach**
+       
        **sudo apt-get remove docker docker.io**
  
  11. **Note: if any erro in Dockerfile by**
