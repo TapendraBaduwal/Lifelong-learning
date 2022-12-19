@@ -187,6 +187,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo systemctl stop docker**
        
+       **sudo systemctl stop docker.socket**
+       
        **sudo systemctl restart docker**
        
        **sudo service docker restart**
