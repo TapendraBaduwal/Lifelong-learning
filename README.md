@@ -197,7 +197,9 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **docker-compose up --detach**
        
-       **sudo apt-get remove docker docker.io**
+       **sudo apt-get remove docker docker.io
+       
+       **(https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker)**
  
  11. **Note: if any erro in Dockerfile by**
  
