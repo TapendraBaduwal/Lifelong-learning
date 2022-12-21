@@ -191,6 +191,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo systemctl restart docker**
        
+       **sudo systemctl start docker.service**
+       
        **sudo service docker restart**
        
        **docker-compose up --detach**
