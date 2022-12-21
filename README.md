@@ -94,6 +94,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
  
  ## Dockerfile
  
+ A.Documentation(https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+ 
  1. sudo apt install docker.io
  
  2. sudo apt install docker-compose
