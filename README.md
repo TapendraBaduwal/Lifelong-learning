@@ -181,6 +181,8 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
        
        **sudo docker-compose up**==Re Builts Docker images
        
+       **sudo docker-compose up --build**
+       
        **sudo docker-compose down**
        
        **sudo systemctl status docker**
