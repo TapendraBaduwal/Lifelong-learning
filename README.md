@@ -729,17 +729,8 @@ e. Set the use_gpu parameter to False
 5. https://github.com/openai/openai-cookbook/blob/4adea8e4e2367ce3dc4aa5ee3b6aa88834900cb7/examples/fine-tuned_qa/olympics-1-collect-data.ipynb
 6. https://www.linkedin.com/feed/update/urn:li:activity:7020409061611327488?utm_source=share&utm_medium=member_desktop
 
-##  Multiprocessing or Threading
 
-from multiprocessing import Process
-from threading import Thread
-import paddleocr
 
-def run():
-    print(paddleocr)
+## Multiprocessing in OCR
 
-if __name__ == '__main__':
-    p = Process(target=run)   # <module 'paddleocr' from '...\\site-packages\\paddleocr\\paddleocr.py'>
-    # p = Thread(target=run)   # <module 'paddleocr' from '...\\site-packages\\paddleocr\\__init__.py'>
-    p.start()
-    p.join()
+   1. https://medium.com/quantrium-tech/optimizing-ppocr-recognition-time-in-python-59f9f6206926
