@@ -734,3 +734,21 @@ e. Set the use_gpu parameter to False
 ## Multiprocessing in OCR
 
    1. https://medium.com/quantrium-tech/optimizing-ppocr-recognition-time-in-python-59f9f6206926
+   
+   2. For multiple images
+   
+        from paddleocr import PaddleOCR
+        from multiprocessing import Pool
+        from functools import partial
+        pool = Pool(processes=50)
+        def perform_ocr_recognition(img_path):
+            ocr = PaddleOCR(use_angle_cls=True, lang='en') # need to run only once to download and load model into memory
+            result = ocr.ocr(img_path, cls=True)
+            for idx in range(len(result)):
+                res = result[idx]
+                for line in res:
+                    print(line)
+        img_path = ['/home/tapendra/Desktop/HtmlCss/pu1.jpg','/home/tapendra/Desktop/HtmlCss/pu1.jpg','/home/tapendra/Desktop/HtmlCss/pu1.jpg']
+        text_output = pool.map(partial(perform_ocr_recognition(img_path)))
+        
+   3. For multiple text line first detect Bbox and pass Bbos to recognation model by multiprocessing
