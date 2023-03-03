@@ -752,3 +752,18 @@ e. Set the use_gpu parameter to False
         text_output = pool.map(partial(perform_ocr_recognition(img_path)))
         
    3. For multiple text line first detect Bbox and pass Bbos to recognation model by multiprocessing
+   
+   
+   4. In PaddleOCR
+   
+         ocr = PaddleOCR(
+            use_angle_cls=False,
+            lang='en', 
+            table=False, 
+            use_mp=True,
+            # image_dir='ocr_images',
+            enable_mkldnn=True,
+            use_gpu=True,
+            max_batch_size = 20,
+            total_process_num = 50
+            total_process_num = os.cpu_count() * 2 - 1)
