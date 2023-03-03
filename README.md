@@ -737,33 +737,33 @@ e. Set the use_gpu parameter to False
    
    2. For multiple images
    
-        from paddleocr import PaddleOCR
-        from multiprocessing import Pool
-        from functools import partial
-        pool = Pool(processes=50)
-        def perform_ocr_recognition(img_path):
-            ocr = PaddleOCR(use_angle_cls=True, lang='en') # need to run only once to download and load model into memory
-            result = ocr.ocr(img_path, cls=True)
-            for idx in range(len(result)):
-                res = result[idx]
-                for line in res:
-                    print(line)
-        img_path = ['/home/tapendra/Desktop/HtmlCss/pu1.jpg','/home/tapendra/Desktop/HtmlCss/pu1.jpg','/home/tapendra/Desktop/HtmlCss/pu1.jpg']
-        text_output = pool.map(partial(perform_ocr_recognition(img_path)))
-        
-   3. For multiple text line first detect Bbox and pass Bbos to recognation model by multiprocessing
+                    from paddleocr import PaddleOCR
+                    from multiprocessing import Pool
+                    from functools import partial
+                    pool = Pool(processes=50)
+                    def perform_ocr_recognition(img_path):
+                        ocr = PaddleOCR(use_angle_cls=True, lang='en') # need to run only once to download and load model into memory
+                        result = ocr.ocr(img_path, cls=True)
+                        for idx in range(len(result)):
+                            res = result[idx]
+                            for line in res:
+                                print(line)
+                    img_path = ['/home/tapendra/Desktop/HtmlCss/pu1.jpg','/home/tapendra/Desktop/HtmlCss/pu1.jpg','/home/tapendra/Desktop/HtmlCss/pu1.jpg']
+                    text_output = pool.map(partial(perform_ocr_recognition(img_path)))
+
+               3. For multiple text line first detect Bbox and pass Bbos to recognation model by multiprocessing
    
    
    4. In PaddleOCR
    
-         ocr = PaddleOCR(
-            use_angle_cls=False,
-            lang='en', 
-            table=False, 
-            use_mp=True,
-            # image_dir='ocr_images',
-            enable_mkldnn=True,
-            use_gpu=True,
-            max_batch_size = 20,
-            total_process_num = 50
-            total_process_num = os.cpu_count() * 2 - 1)
+                     ocr = PaddleOCR(
+                        use_angle_cls=False,
+                        lang='en', 
+                        table=False, 
+                        use_mp=True,
+                        # image_dir='ocr_images',
+                        enable_mkldnn=True,
+                        use_gpu=True,
+                        max_batch_size = 20,
+                        total_process_num = 50
+                        total_process_num = os.cpu_count() * 2 - 1)
