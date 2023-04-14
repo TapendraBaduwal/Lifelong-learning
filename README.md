@@ -44,7 +44,7 @@ Creats [python-package.yml] file(.github folders vitra Workflows folder creat ga
 5. Make Packages  jun folder lai hamile packages bauna xa (src vane folder banyem  tesvitra arko abc vanne folder banayera teslai packages bauna abc vitra __init__.py file creat garna parxa jasle abc folder aba packages ho vanne januxa).
 Note: Jun jun kura haru like project ko project.py files ra teyo sanga related vako files haru like input.json, train model haru sabai abc packages vitra nai huna parxa).
 Path haru ramro sanga setup garnu parne hunxa python.py files ma.
-Note: Non-python files aharu packages ma adda garne tarika package_data={'': ['inputraw.json','ocrmodel']}
+Note: Non-python files haru packages ma add garne tarika package_data={'': ['raw.json','ocrmodel-test']}
 
 
 6. Creat [setup.py] python files in which we should writes some commands, Focus on requiremnts.txt commands installation, hamile banako packages ko directory, Python files packages banuda nai  setup hunxa ra non-python files haru lai ni xuttai add garnu loarne hunxa.
@@ -142,7 +142,7 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
          #!/bin/sh
 
-         python3 -m resultkpd
+         python3 -m result
          
          or
          
@@ -154,11 +154,11 @@ If hamle README.md ,LICENSE files haru ni add garna xa vane setup.py file bata a
 
          Support multi user
         
-         gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003
+         gunicorn tapendraapis.wsgi:application --bind 0.0.0.0:8003
          
          or
          
-         gunicorn kapediamlapis.wsgi:application --bind 0.0.0.0:8003 --timeout 600
+         gunicorn tapendraapis.wsgi:application --bind 0.0.0.0:8003 --timeout 600
 
 
  
@@ -398,7 +398,7 @@ On the other hand, in Pillow, the order of colors is assumed to be RGB (red, gre
                 from PIL import Image
 
                 ocr = PaddleOCR(use_angle_cls=True, lang='ne')
-                img_path = '/home/tapendra/Desktop/kapediaml/images/3lineimg.png'
+                img_path = '/home/tapendra/Desktop/images/3lineimg.png'
                 result = ocr.ocr(img_path,cls=True,rec=False)
                 for line in result:
                     print(line)
