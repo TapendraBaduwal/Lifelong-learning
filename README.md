@@ -770,4 +770,6 @@ e. Set the use_gpu parameter to False
 
 
 
-## Note test
+## Pytorch-Deep-Learning
+
+  https://github.com/mrdbourke/pytorch-deep-learning/tree/main/docs
